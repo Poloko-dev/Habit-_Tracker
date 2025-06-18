@@ -130,7 +130,7 @@ export default function Dashboard({ habits }) {
                             
                             <form onSubmit={handleSubmit} className="space-y-6 mb-6">
                                 <div>
-                                    <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                                    <label htmlFor="name" className="block text-left font-medium text-gray-700">
                                         Habit Name
                                     </label>
                                     <input
@@ -139,13 +139,13 @@ export default function Dashboard({ habits }) {
                                         name="name"
                                         value={data.name}
                                         onChange={(e) => setData('name', e.target.value)}
-                                        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                        className="mt-1 block w-1/2 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                                     />
                                     {errors.name && <div className="text-red-500 text-xs">{errors.name}</div>}
                                 </div>
 
                                 <div>
-                                    <label htmlFor="current" className="block text-sm font-medium text-gray-700">
+                                    <label htmlFor="current" className="block text-left font-medium text-gray-700">
                                         Current Progress
                                     </label>
                                     <input
@@ -154,13 +154,13 @@ export default function Dashboard({ habits }) {
                                         name="current"
                                         value={data.current}
                                         onChange={(e) => setData('current', parseInt(e.target.value) || 0)}
-                                        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                        className="mt-1 block w-1/2 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                                     />
                                     {errors.current && <div className="text-red-500 text-xs">{errors.current}</div>}
                                 </div>
 
                                 <div>
-                                    <label htmlFor="goal" className="block text-sm font-medium text-gray-700">
+                                    <label htmlFor="goal" className="block text-left font-medium text-gray-700">
                                         Goal
                                     </label>
                                     <input
@@ -169,7 +169,7 @@ export default function Dashboard({ habits }) {
                                         name="goal"
                                         value={data.goal}
                                         onChange={(e) => setData('goal', parseInt(e.target.value) || 0)}
-                                        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                        className="mt-1 block w-1/2 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                                     />
                                     {errors.goal && <div className="text-red-500 text-xs">{errors.goal}</div>}
                                 </div>
